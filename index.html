@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio ? who I am and what I do" />
-  <title>Portfolio</title>
+  <meta name="description" content="Shilo Hadad ? Full-Stack Developer & Product Builder. Israel. Open to remote." />
+  <title>Shilo Hadad ? Full-Stack Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
@@ -49,7 +49,7 @@
             class="hero-portrait"
             data-bind-src="images.hero"
             src="assets/images/hero-placeholder.svg"
-            alt="Portrait"
+            alt="Shilo Hadad"
             width="420"
             height="560"
           />
@@ -84,7 +84,7 @@
             class="about-photo"
             data-bind-src="images.about"
             src="assets/images/about-placeholder.svg"
-            alt="About"
+            alt="Shilo Hadad"
             width="480"
             height="560"
           />
@@ -103,6 +103,16 @@
       </div>
     </section>
 
+    <section class="skills section-light" id="skills">
+      <div class="container">
+        <header class="section-head">
+          <p class="label" data-scroll="fade-up">Stack</p>
+          <h2 class="section-title" data-scroll="fade-up" data-scroll-delay="1">Skills</h2>
+        </header>
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
     <section class="services section-dark" id="services">
       <div class="container">
         <header class="section-head section-head--light">
@@ -116,8 +126,8 @@
     <section class="contact section-light" id="contact">
       <div class="container contact-inner">
         <h2 class="contact-title" data-scroll="fade-up">Let's work together</h2>
-        <p class="contact-sub" data-scroll="fade-up" data-scroll-delay="1">Send your resume and photos ? I'll plug in your real content.</p>
-        <a class="contact-email" data-bind="email" data-bind-href="email" href="mailto:your@email.com" data-scroll="scale" data-scroll-delay="2">your@email.com</a>
+        <p class="contact-sub" data-scroll="fade-up" data-scroll-delay="1" data-bind="location">Israel ? Open to Remote</p>
+        <div class="contact-links" id="contact-links" data-scroll="fade-up" data-scroll-delay="2"></div>
         <div class="social-links" id="social-links" data-scroll="fade-up" data-scroll-delay="3"></div>
       </div>
     </section>

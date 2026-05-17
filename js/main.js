@@ -33,6 +33,9 @@
     });
 
     document.title = `${C.name || "Portfolio"} — ${C.role || ""}`;
+
+    const cvBtn = document.querySelector(".btn-cv");
+    if (cvBtn && !C.cvFile) cvBtn.style.display = "none";
   }
 
   function renderStats() {
@@ -96,17 +99,51 @@
       .join("");
   }
 
+  function renderContact() {
+    const wrap = document.getElementById("contact-links");
+    if (!wrap) return;
+    const parts = [];
+    if (C.email) {
+      parts.push(`<a class="contact-email" href="mailto:${C.email}">${C.email}</a>`);
+    }
+    if (C.phone && C.phoneTel) {
+      parts.push(`<a class="contact-phone" href="tel:${C.phoneTel}">${C.phone}</a>`);
+    }
+    wrap.innerHTML = parts.join("");
+  }
+
+  function renderSkills() {
+    const grid = document.getElementById("skills-grid");
+    if (!grid || !C.skills) return;
+    grid.innerHTML = C.skills
+      .map(
+        (group, i) => `
+      <div class="skill-group" data-scroll="fade-up" data-scroll-delay="${i}">
+        <h3 class="skill-group-title">${group.title}</h3>
+        <ul class="skill-tags">
+          ${group.items.map((item) => `<li>${item}</li>`).join("")}
+        </ul>
+      </div>`
+      )
+      .join("");
+  }
+
   function renderSocial() {
     const wrap = document.getElementById("social-links");
     if (!wrap || !C.social) return;
-    const labels = { linkedin: "LinkedIn", github: "GitHub", behance: "Behance" };
+    const labels = {
+      linkedin: "LinkedIn",
+      github: "GitHub",
+      portfolio: "Portfolio",
+    };
     wrap.innerHTML = Object.entries(C.social)
       .map(([key, url]) => {
         const label = labels[key] || key;
         return url && url !== "#"
           ? `<a href="${url}" target="_blank" rel="noopener">${label}</a>`
-          : `<span class="social-placeholder">${label}</span>`;
+          : "";
       })
+      .filter(Boolean)
       .join("");
   }
 
@@ -292,6 +329,8 @@
   renderStats();
   renderProjects();
   renderServices();
+  renderSkills();
+  renderContact();
   renderSocial();
   initScrollReveal();
   initCounters();
