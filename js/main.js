@@ -29,7 +29,7 @@
         const key = el.getAttribute("data-bind-src");
         el.src =
           key === "images.hero"
-            ? "assets/images/samurai-hero.png?v=7"
+            ? "assets/images/samurai-hero.png?v=8"
             : "assets/images/shilo.png";
       };
     });
