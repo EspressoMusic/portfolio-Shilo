@@ -413,6 +413,16 @@ ul {
   filter: none;
 }
 
+.hero-photo--cutout img {
+  max-height: min(78vh, 660px);
+  width: auto;
+  max-width: 100%;
+  margin-inline: auto;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: none;
+}
+
 /* ROLE CARDS */
 .roles {
   padding: 0 0 4rem;
