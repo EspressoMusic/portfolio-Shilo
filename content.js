@@ -1,4 +1,4 @@
-/** Portfolio — Shilo Hadad (swap images in assets/images/) */
+/** Portfolio — Shilo Hadad */
 window.PORTFOLIO_CONTENT = {
   brand: "SHILO",
   name: "Shilo Hadad",
@@ -20,8 +20,9 @@ window.PORTFOLIO_CONTENT = {
     portfolio: "https://espressomusic.github.io/portfolio-Shilo/",
   },
   images: {
-    hero: "assets/images/samurai-hero.png",
-    about: "assets/images/shilo.png",
+    hero: "assets/images/shiloli.png",
+    about: "assets/images/samurai-about.png",
+    contact: "assets/images/samurai-contact.png",
   },
   roleCards: [
     { icon: "code", title: "Full-Stack Dev", tagline: "React · Next.js · APIs" },

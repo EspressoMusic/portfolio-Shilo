@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <meta name="description" content="Shilo Hadad ? Full-Stack Developer & Product Builder" />
   <title>Shilo Hadad | Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css?v=2026051819" />
 </head>
 <body>
   <div class="sakura-layer" aria-hidden="true" id="sakura"></div>
-  <div class="ink-deco ink-deco--left" aria-hidden="true"></div>
-
   <header class="header" id="header">
     <a href="#home" class="logo">
       <span class="logo-kanji">&#20365;</span>
@@ -32,7 +33,6 @@
       </ul>
     </nav>
     <div class="header-actions">
-      <div class="header-social" id="header-social"></div>
       <a href="#contact" class="btn btn-contact">Contact Me</a>
     </div>
   </header>
@@ -40,6 +40,16 @@
   <main>
     <!-- HERO -->
     <section class="hero" id="home">
+      <div class="jp-marks" aria-hidden="true">
+        <span class="jp-mark jp-mark--blob jp-mark--hero-blob-a"></span>
+        <span class="jp-mark jp-mark--blob jp-mark--hero-blob-b"></span>
+        <span class="jp-mark jp-mark--sun"></span>
+        <span class="jp-mark jp-mark--katana"></span>
+        <span class="jp-mark jp-mark--enso jp-mark--sm"></span>
+        <span class="jp-mark jp-mark--petal jp-mark--hero-petal-a"></span>
+        <span class="jp-mark jp-mark--petal jp-mark--hero-petal-b"></span>
+        <span class="jp-mark jp-mark--wave jp-mark--sm jp-mark--extra"></span>
+      </div>
       <div class="hero-ink" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-copy">
@@ -54,28 +64,20 @@
             <span class="hero-title-accent" data-bind="heroRoleAccent">& Product Builder</span>
           </h1>
           <p class="hero-desc" data-animate="fade-up" data-delay="2" data-bind="heroBio"></p>
-          <p class="hero-meta" data-animate="fade-up" data-delay="3">
-            <a data-bind-href="email" data-bind="email" href="mailto:"></a>
-          </p>
-          <div class="hero-btns" data-animate="fade-up" data-delay="4">
+          <div class="hero-btns" data-animate="fade-up" data-delay="3">
             <a href="#" class="btn btn-outline" data-bind-href="cvFile" download>Download CV</a>
             <a href="#contact" class="btn btn-solid">Hire Me Now</a>
           </div>
         </div>
         <div class="hero-visual hero-visual--warrior" data-animate="fade-left" data-delay="2">
-          <div class="hero-fx" aria-hidden="true">
-            <div class="hero-fire-glow"></div>
-            <div class="hero-embers" id="hero-embers"></div>
-            <div class="hero-sparks" id="hero-sparks"></div>
-          </div>
           <figure class="hero-photo-wrap">
             <img
               class="hero-samurai-img"
               data-bind-src="images.hero"
-              src="assets/images/samurai-hero.png?v=11"
-              alt="Shilo Hadad ? Samurai"
-              width="723"
-              height="969"
+              src="assets/images/shiloli.png?v=1"
+              alt="Shilo Hadad — Samurai"
+              width="2828"
+              height="4000"
             />
           </figure>
         </div>
@@ -84,17 +86,53 @@
 
     <!-- ROLE CARDS -->
     <section class="roles">
+      <div class="jp-marks" aria-hidden="true">
+        <span class="jp-mark jp-mark--blob jp-mark--roles-blob-a"></span>
+        <span class="jp-mark jp-mark--blob jp-mark--roles-blob-b"></span>
+        <span class="jp-mark jp-mark--enso"></span>
+        <span class="jp-mark jp-mark--petal jp-mark--roles-petal"></span>
+        <span class="jp-mark jp-mark--fan jp-mark--sm jp-mark--extra"></span>
+      </div>
       <div class="container roles-row" id="role-cards"></div>
     </section>
 
     <!-- ABOUT -->
     <section class="about" id="about">
+      <div class="jp-marks" aria-hidden="true">
+        <span class="jp-mark jp-mark--blob jp-mark--about-blob-a"></span>
+        <span class="jp-mark jp-mark--blob jp-mark--about-blob-b"></span>
+        <span class="jp-mark jp-mark--sakura"></span>
+        <span class="jp-mark jp-mark--wave"></span>
+        <span class="jp-mark jp-mark--torii jp-mark--sm"></span>
+        <span class="jp-mark jp-mark--petal jp-mark--about-petal-a"></span>
+        <span class="jp-mark jp-mark--petal jp-mark--about-petal-b"></span>
+        <span class="jp-mark jp-mark--enso jp-mark--sm jp-mark--extra"></span>
+      </div>
       <div class="container about-grid">
         <div class="about-visual" data-animate="fade-right">
-          <div class="about-sun" aria-hidden="true"></div>
           <p class="about-sticker">Hi There!</p>
           <figure class="about-photo">
-            <img data-bind-src="images.about" src="assets/images/shilo.png" alt="Shilo Hadad" />
+            <div class="about-photo-wrap">
+              <div class="about-atmosphere" aria-hidden="true">
+                <span class="about-fog about-fog--a"></span>
+                <span class="about-fog about-fog--b"></span>
+                <span class="about-fog about-fog--c"></span>
+                <span class="about-smoke about-smoke--a"></span>
+                <span class="about-smoke about-smoke--b"></span>
+                <span class="about-smoke about-smoke--c"></span>
+              </div>
+              <div class="about-sun" aria-hidden="true"></div>
+              <img
+                class="about-samurai-img"
+                data-bind-src="images.about"
+                src="assets/images/samurai-about@2x.png?v=12"
+                srcset="assets/images/samurai-about.png?v=12 1x, assets/images/samurai-about@2x.png?v=12 2x"
+                sizes="(min-width: 900px) 520px, 90vw"
+                alt="Shilo Hadad — Samurai"
+                width="723"
+                height="1024"
+              />
+            </div>
           </figure>
         </div>
         <div class="about-content">
@@ -108,6 +146,14 @@
 
     <!-- SKILLS -->
     <section class="skills-section" id="skills">
+      <div class="jp-marks" aria-hidden="true">
+        <span class="jp-mark jp-mark--blob jp-mark--skills-blob-a"></span>
+        <span class="jp-mark jp-mark--blob jp-mark--skills-blob-b"></span>
+        <span class="jp-mark jp-mark--torii"></span>
+        <span class="jp-mark jp-mark--wave jp-mark--sm"></span>
+        <span class="jp-mark jp-mark--fan jp-mark--sm"></span>
+        <span class="jp-mark jp-mark--petal jp-mark--skills-petal"></span>
+      </div>
       <div class="container skills-grid">
         <div class="skills-copy">
           <h2 class="skills-title" data-animate="fade-up">What my craft includes</h2>
@@ -122,6 +168,15 @@
 
     <!-- PORTFOLIO -->
     <section class="portfolio" id="work">
+      <div class="jp-marks" aria-hidden="true">
+        <span class="jp-mark jp-mark--blob jp-mark--work-blob-a"></span>
+        <span class="jp-mark jp-mark--blob jp-mark--work-blob-b"></span>
+        <span class="jp-mark jp-mark--fan"></span>
+        <span class="jp-mark jp-mark--katana jp-mark--sm"></span>
+        <span class="jp-mark jp-mark--sun jp-mark--sm"></span>
+        <span class="jp-mark jp-mark--petal jp-mark--work-petal"></span>
+        <span class="jp-mark jp-mark--wave jp-mark--sm jp-mark--extra"></span>
+      </div>
       <div class="container">
         <div class="section-head" data-animate="fade-up">
           <span class="section-kanji">&#20316;&#21697;</span>
@@ -133,12 +188,33 @@
 
     <!-- CONTACT -->
     <section class="contact" id="contact">
+      <div class="jp-marks" aria-hidden="true">
+        <span class="jp-mark jp-mark--blob jp-mark--contact-blob-a"></span>
+        <span class="jp-mark jp-mark--blob jp-mark--contact-blob-b"></span>
+        <span class="jp-mark jp-mark--moon"></span>
+        <span class="jp-mark jp-mark--petal jp-mark--contact-petal-a"></span>
+        <span class="jp-mark jp-mark--petal jp-mark--contact-petal-b"></span>
+        <span class="jp-mark jp-mark--enso jp-mark--sm jp-mark--extra"></span>
+      </div>
       <div class="container contact-box" data-animate="scale">
-        <span class="section-kanji">&#36899;&#32097;</span>
-        <h2>Begin your mission</h2>
-        <p data-bind="location"></p>
-        <div id="contact-links"></div>
-        <div class="contact-social" id="contact-social"></div>
+        <div class="contact-copy">
+          <span class="section-kanji">&#36899;&#32097;</span>
+          <h2>Begin your mission</h2>
+          <p data-bind="location"></p>
+          <div id="contact-links"></div>
+          <div class="contact-social" id="contact-social"></div>
+        </div>
+        <figure class="contact-visual">
+          <div class="contact-photo-wrap">
+            <img
+              class="contact-samurai"
+              src="assets/images/samurai-contact.png?v=7"
+              alt=""
+              width="463"
+              height="218"
+            />
+          </div>
+        </figure>
       </div>
     </section>
   </main>
@@ -150,7 +226,7 @@
     </div>
   </footer>
 
-  <script src="content.js"></script>
-  <script src="js/main.js"></script>
+  <script src="content.js?v=2026051814"></script>
+  <script src="js/main.js?v=2026051814"></script>
 </body>
 </html>

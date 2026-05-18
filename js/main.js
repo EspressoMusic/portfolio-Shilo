@@ -29,8 +29,8 @@
         const key = el.getAttribute("data-bind-src");
         el.src =
           key === "images.hero"
-            ? "assets/images/samurai-hero.png?v=11"
-            : "assets/images/shilo.png";
+            ? "assets/images/shiloli.png?v=1"
+            : "assets/images/samurai-about.png?v=12";
       };
     });
     document.querySelectorAll("[data-bind-href]").forEach((el) => {
@@ -51,11 +51,6 @@
       .filter(([, u]) => u && u !== "#")
       .map(([k, u]) => `<a href="${u}" target="_blank" rel="noopener" class="${className}">${labels[k] || k}</a>`)
       .join("");
-  }
-
-  function renderHeaderSocial() {
-    const el = document.getElementById("header-social");
-    if (el) el.innerHTML = socialLinks("social-icon");
   }
 
   function renderAboutSocial() {
@@ -240,7 +235,6 @@
   document.getElementById("year").textContent = new Date().getFullYear();
 
   bindContent();
-  renderHeaderSocial();
   renderAboutSocial();
   renderContact();
   renderRoleCards();
@@ -253,55 +247,26 @@
   initHeader();
   initNav();
   initSmooth();
-  initHeroFx();
+  initPhotoParallax(".hero-photo-wrap", ".hero-visual--warrior", 1.025);
+  initPhotoParallax(".about-photo-wrap", ".about-visual", 1.04);
+  initPhotoParallax(".contact-photo-wrap", ".contact-visual", 1.08);
 })();
 
-function initHeroFx() {
+function initPhotoParallax(wrapSelector, containerSelector, scale) {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-  const embersRoot = document.getElementById("hero-embers");
-  const sparksRoot = document.getElementById("hero-sparks");
-  const wrap = document.querySelector(".hero-photo-wrap");
-  if (!embersRoot || !sparksRoot) return;
+  const wrap = document.querySelector(wrapSelector);
+  const container = document.querySelector(containerSelector);
+  if (!wrap || !container) return;
 
-  for (let i = 0; i < 28; i++) {
-    const e = document.createElement("span");
-    e.className = "ember";
-    const size = 3 + Math.random() * 5;
-    e.style.width = `${size}px`;
-    e.style.height = `${size}px`;
-    e.style.left = `${38 + Math.random() * 24}%`;
-    e.style.bottom = `${5 + Math.random() * 18}%`;
-    e.style.setProperty("--drift", `${(Math.random() - 0.5) * 60}px`);
-    e.style.animationDuration = `${2.2 + Math.random() * 2.5}s`;
-    e.style.animationDelay = `${Math.random() * 3}s`;
-    embersRoot.appendChild(e);
-  }
-
-  for (let i = 0; i < 12; i++) {
-    const s = document.createElement("span");
-    s.className = "spark";
-    s.style.left = `${42 + Math.random() * 16}%`;
-    s.style.bottom = `${20 + Math.random() * 25}%`;
-    s.style.setProperty("--sx", `${(Math.random() - 0.5) * 90}px`);
-    s.style.setProperty("--sy", `${-40 - Math.random() * 100}px`);
-    s.style.animationDuration = `${1.8 + Math.random() * 2}s`;
-    s.style.animationDelay = `${Math.random() * 4}s`;
-    sparksRoot.appendChild(s);
-  }
-
-  if (!wrap) return;
-  const visual = wrap.closest(".hero-visual--warrior");
-  if (!visual) return;
-
-  visual.addEventListener("mousemove", (ev) => {
-    const r = visual.getBoundingClientRect();
+  container.addEventListener("mousemove", (ev) => {
+    const r = container.getBoundingClientRect();
     const x = (ev.clientX - r.left) / r.width - 0.5;
     const y = (ev.clientY - r.top) / r.height - 0.5;
-    wrap.style.transform = `translateY(-10px) translate(${x * 8}px, ${y * 6}px) scale(1.025)`;
+    wrap.style.transform = `translateY(-10px) translate(${x * 12}px, ${y * 8}px) scale(${scale})`;
   });
 
-  visual.addEventListener("mouseleave", () => {
+  container.addEventListener("mouseleave", () => {
     wrap.style.transform = "";
   });
 }
