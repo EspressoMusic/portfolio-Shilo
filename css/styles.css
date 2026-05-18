@@ -357,32 +357,37 @@ ul {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   min-height: 480px;
 }
 
-.hero-sun {
-  position: absolute;
-  width: 85%;
-  max-width: 420px;
-  aspect-ratio: 1;
-  background: radial-gradient(circle at 35% 35%, var(--sun-glow), var(--sun) 45%, var(--crimson-light) 100%);
-  border-radius: 58% 42% 55% 45%;
-  bottom: 5%;
-  right: 0;
-  z-index: 0;
-  animation: sunPulse 6s ease-in-out infinite;
-  box-shadow: 0 30px 60px rgba(185, 28, 28, 0.25);
+.hero-visual--samurai {
+  min-height: clamp(420px, 72vh, 640px);
+  padding: 1rem;
+  background: radial-gradient(ellipse at 50% 80%, #1a0808 0%, #0a0a0a 55%, transparent 72%);
+  border-radius: 20px;
 }
 
-@keyframes sunPulse {
+.hero-aura {
+  position: absolute;
+  inset: 5% 0 0;
+  background: radial-gradient(circle at 50% 60%, rgba(185, 28, 28, 0.35), transparent 55%);
+  z-index: 0;
+  animation: auraPulse 5s ease-in-out infinite;
+}
+
+@keyframes auraPulse {
   0%,
   100% {
-    transform: scale(1) rotate(0deg);
+    opacity: 0.7;
   }
   50% {
-    transform: scale(1.04) rotate(2deg);
+    opacity: 1;
   }
+}
+
+.hero-sun {
+  display: none;
 }
 
 .hero-slash {
@@ -404,12 +409,26 @@ ul {
   margin-bottom: -2rem;
 }
 
+.hero-photo--samurai {
+  width: min(100%, 480px);
+  margin-bottom: 0;
+}
+
 .hero-photo img {
   width: 100%;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 24px 40px rgba(28, 18, 16, 0.25));
-  /* full color */
+}
+
+.hero-photo--samurai img {
+  max-height: min(72vh, 620px);
+  width: auto;
+  max-width: 100%;
+  margin-inline: auto;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 20px 50px rgba(185, 28, 28, 0.35));
 }
 
 /* ROLE CARDS */

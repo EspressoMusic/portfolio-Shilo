@@ -20,7 +20,7 @@ window.PORTFOLIO_CONTENT = {
     portfolio: "https://espressomusic.github.io/portfolio-Shilo/",
   },
   images: {
-    hero: "assets/images/shilo.png",
+    hero: "assets/images/samurai-hero.png",
     about: "assets/images/shilo.png",
   },
   roleCards: [

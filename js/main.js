@@ -25,7 +25,12 @@
       const v = get(C, el.getAttribute("data-bind-src"));
       if (!v) return;
       el.src = v;
-      el.onerror = () => (el.src = "assets/images/shilo.png");
+      el.onerror = () => {
+        el.src =
+          el.getAttribute("data-bind-src") === "images.hero"
+            ? "assets/images/samurai-hero.png"
+            : "assets/images/shilo.png";
+      };
     });
     document.querySelectorAll("[data-bind-href]").forEach((el) => {
       const key = el.getAttribute("data-bind-href");
